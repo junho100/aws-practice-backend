@@ -36,4 +36,4 @@ lerna-debug.log*
 
 .env
 
-react-nest-aws-key.pem
+crn-junho-ec2-public.pem
