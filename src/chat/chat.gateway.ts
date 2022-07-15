@@ -8,7 +8,10 @@ import { Socket } from 'socket.io';
 import { ChatService } from './chat.service';
 
 @WebSocketGateway({
-  cors: true,
+  cors: {
+    origin: 'http://localhost:3000',
+    credentials: true,
+  },
 })
 export class ChatGateway {
   constructor(private chatService: ChatService) {}
