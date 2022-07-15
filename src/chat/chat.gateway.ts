@@ -9,7 +9,7 @@ import { ChatService } from './chat.service';
 
 @WebSocketGateway({
   cors: {
-    origin: process.env.FRONT_URL,
+    origin: '*',
     credentials: true,
   },
 })

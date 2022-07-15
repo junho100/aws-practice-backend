@@ -6,7 +6,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors({
-    origin: process.env.FRONT_URL,
+    origin: '*',
     credentials: true,
   });
   app.use(morgan('tiny'));
