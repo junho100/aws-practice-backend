@@ -7,7 +7,7 @@ import {
 import { Socket } from 'socket.io';
 import { ChatService } from './chat.service';
 
-@WebSocketGateway(80, {
+@WebSocketGateway({
   cors: {
     origin: '*',
     credentials: true,
