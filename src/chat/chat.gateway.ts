@@ -8,7 +8,9 @@ import { Socket } from 'socket.io';
 import { ChatService } from './chat.service';
 
 @WebSocketGateway({
-  cors: true,
+  cors: {
+    origin: 'http://localhost:3000',
+  },
   transports: ['websocket'],
   allowEIO3: true,
 })
