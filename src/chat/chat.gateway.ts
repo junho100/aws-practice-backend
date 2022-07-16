@@ -7,12 +7,11 @@ import {
 import { Socket } from 'socket.io';
 import { ChatService } from './chat.service';
 
-@WebSocketGateway({
+@WebSocketGateway(80, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true,
   },
-  transports: ['websocket'],
   allowEIO3: true,
 })
 export class ChatGateway {
@@ -23,6 +22,7 @@ export class ChatGateway {
     @ConnectedSocket() socket: Socket,
     @MessageBody() message: string,
   ) {
+    console.log(socket);
     socket.broadcast.emit('new_chat', message);
     await this.chatService.createChat(socket.id, message);
     return;
