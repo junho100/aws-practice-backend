@@ -9,9 +9,10 @@ import { ChatService } from './chat.service';
 
 @WebSocketGateway({
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'http://d1ps7gv5qruzjl.cloudfront.net',
     methods: ['GET', 'POST'],
     credentials: true,
+    transports: ['websocket'],
   },
   transports: ['websocket'],
   allowEIO3: true,

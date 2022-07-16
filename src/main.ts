@@ -6,11 +6,10 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors({
-    origin:
-      'http://crn-junho-static-web.s3-website.ap-northeast-2.amazonaws.com',
+    origin: 'http://d1ps7gv5qruzjl.cloudfront.net',
     credentials: true,
   });
   app.use(morgan('tiny'));
-  await app.listen(80);
+  await app.listen(8080);
 }
 bootstrap();
