@@ -12,6 +12,7 @@ import { ChatService } from './chat.service';
     origin: '*',
     credentials: true,
   },
+  transports: ['websocket'],
 })
 export class ChatGateway {
   constructor(private chatService: ChatService) {}
