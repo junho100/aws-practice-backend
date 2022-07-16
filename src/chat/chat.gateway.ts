@@ -8,12 +8,7 @@ import { Socket } from 'socket.io';
 import { ChatService } from './chat.service';
 
 @WebSocketGateway({
-  cors: {
-    origin: 'http://d1ps7gv5qruzjl.cloudfront.net',
-    methods: ['GET', 'POST'],
-    credentials: true,
-    transports: ['websocket'],
-  },
+  cors: true,
   transports: ['websocket'],
   allowEIO3: true,
 })
