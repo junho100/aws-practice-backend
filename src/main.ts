@@ -8,6 +8,6 @@ async function bootstrap() {
     cors: true,
   });
   app.use(morgan('tiny'));
-  await app.listen(8080);
+  await app.listen(80);
 }
 bootstrap();
