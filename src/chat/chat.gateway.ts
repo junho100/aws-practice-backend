@@ -9,11 +9,12 @@ import { ChatService } from './chat.service';
 
 @WebSocketGateway({
   cors: {
-    origin: 'http://d1ps7gv5qruzjl.cloudfront.net',
+    origin: 'http://localhost:3000/',
     methods: ['GET', 'POST'],
     transports: ['websocket', 'polling'],
     credentials: true,
   },
+  allowEIO3: true,
 })
 export class ChatGateway {
   constructor(private chatService: ChatService) {}
