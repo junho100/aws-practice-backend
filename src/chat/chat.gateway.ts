@@ -11,9 +11,9 @@ import { ChatService } from './chat.service';
   cors: {
     origin: 'http://localhost:3000/',
     methods: ['GET', 'POST'],
-    transports: ['websocket', 'polling'],
     credentials: true,
   },
+  transports: ['websocket'],
   allowEIO3: true,
 })
 export class ChatGateway {
