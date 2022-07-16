@@ -10,7 +10,7 @@ import { ChatService } from './chat.service';
 @WebSocketGateway({
   cors: {
     origin: 'http://localhost:3000',
-    withCredentials: true,
+    credentials: true,
   },
   transports: ['websocket'],
   allowEIO3: true,
